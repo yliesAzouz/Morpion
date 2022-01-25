@@ -1,0 +1,25 @@
+@media screen and (max-width: 727px) {
+
+    #logo{
+        width: 70%;
+        margin-bottom: 2rem;
+      }
+
+    .game{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    #Jeu{
+        order: 3;
+    }
+
+    #j2{
+        order: 2;
+    }
+
+    .joueur img{
+        height: 150px;
+    }
+
+}

@@ -1,0 +1,21 @@
+@media screen and (max-width: 930px) {
+
+    .game{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    #Jeu{
+        order: 3;
+    }
+
+    #j2{
+        order: 2;
+    }
+
+    .joueur img{
+        height: 150px;
+    }
+
+
+}

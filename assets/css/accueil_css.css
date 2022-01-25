@@ -1,0 +1,35 @@
+body {
+  width: 100%;
+    background: url(../pictures/bg.gif);
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+h1{
+  color: white;
+  font-family: helvetica;
+  font-size: 70px;
+  margin-bottom: 5rem;
+}
+
+.choice{
+  
+  width: 400px;
+  height: 300px;
+border-radius: 20px;
+  background-color: white;
+  margin-bottom: 2rem;
+
+}
+
+.choice h1{
+  font-size: 30px;
+  color: tomato;
+  font-family: cursive;
+}
+
+
+  
