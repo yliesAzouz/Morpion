@@ -81,7 +81,7 @@ function rechercherVainqueur() {
       checkWin = true;
       message.innerHTML = "X win the game";
       audio.play()
-      blood2.style.display = "block";
+      blood2.style.zIndex = "1";
       setTimeout(() => {// appelle ma fonction avec un delai de 1sec
       updateScore1(playerScoreOne) 
       }, 1500); // delai toujours en milliseconde
@@ -96,7 +96,7 @@ function rechercherVainqueur() {
       checkWin = true;
       message.innerHTML = "X win the game";
       audio.play()
-      blood2.style.display = "block";
+      blood2.style.zIndex = "1";
       updateScore1(playerScoreOne)
       break;
     }
@@ -108,7 +108,7 @@ function rechercherVainqueur() {
       checkWin = true;
       message.innerHTML = "X win the game";
       audio.play()
-      blood2.style.display = "block";
+      blood2.style.zIndex = "1";
       updateScore1(playerScoreOne)
       break;
     }
@@ -120,7 +120,7 @@ function rechercherVainqueur() {
       checkWin = true;
       message.innerHTML = "X win the game";
       audio.play()
-      blood2.style.display = "block";
+      blood2.style.zIndex = "1";
       updateScore1(playerScoreOne)
       break;
     }
@@ -132,7 +132,7 @@ function rechercherVainqueur() {
       checkWin = true;
       message.innerHTML = "X win the game";
       audio.play()
-      blood2.style.display = "block";
+      blood2.style.zIndex = "1";
       updateScore1(playerScoreOne)
       break;
     }
@@ -144,7 +144,7 @@ function rechercherVainqueur() {
       checkWin = true;
       message.innerHTML = "X win the game";
       audio.play()
-      blood2.style.display = "block";
+      blood2.style.zIndex = "1";
       updateScore1(playerScoreOne)
       break;
     }
@@ -156,7 +156,7 @@ function rechercherVainqueur() {
       checkWin = true;
       message.innerHTML = "X win the game";
       audio.play()
-      blood2.style.display = "block";
+      blood2.style.zIndex = "1";
       updateScore1(playerScoreOne)
       break;
     }
@@ -168,7 +168,7 @@ function rechercherVainqueur() {
       checkWin = true;
       message.innerHTML = "X win the game";
       audio.play()
-      blood2.style.display = "block";
+      blood2.style.zIndex = "1";
       updateScore1(playerScoreOne)
       break;
     }
@@ -180,7 +180,7 @@ function rechercherVainqueur() {
       checkWin = true;
       message.innerHTML = "O win the game";
       audio.play()
-      blood.style.display = "block";
+      blood.style.zIndex = "1";
       updateScore2(playerScoreTwo)
       break;
     }
@@ -192,7 +192,7 @@ function rechercherVainqueur() {
       checkWin = true;
       message.innerHTML = "O win the game";
       audio.play()
-      blood.style.display = "block";
+      blood.style.zIndex = "1";
       updateScore2(playerScoreTwo)
       break;
     }
@@ -204,7 +204,7 @@ function rechercherVainqueur() {
       checkWin = true;
       message.innerHTML = "O win the game";
       audio.play()
-      blood.style.display = "block";
+      blood.style.zIndex = "1";
       updateScore2(playerScoreTwo)
       break;
     }
@@ -216,7 +216,7 @@ function rechercherVainqueur() {
       checkWin = true;
       message.innerHTML = "O win the game";
       audio.play()
-      blood.style.display = "block";
+      blood.style.zIndex = "1";
       updateScore2(playerScoreTwo)
       break;
     }
@@ -228,7 +228,7 @@ function rechercherVainqueur() {
       checkWin = true;
       message.innerHTML = "O win the game";
       audio.play()
-      blood.style.display = "block";
+      blood.style.zIndex = "1";
       updateScore2(playerScoreTwo)
       break;
     }
@@ -240,7 +240,7 @@ function rechercherVainqueur() {
       checkWin = true;
       message.innerHTML = "O win the game";
       audio.play()
-      blood.style.display = "block";
+      blood.style.zIndex = "1";
       updateScore2(playerScoreTwo)
       break;
     }
@@ -252,7 +252,7 @@ function rechercherVainqueur() {
       checkWin = true;
       message.innerHTML = "O win the game";
       audio.play()
-      blood.style.display = "block";
+      blood.style.zIndex = "1";
       updateScore2(playerScoreTwo)
       break;
     }
@@ -264,7 +264,7 @@ function rechercherVainqueur() {
       checkWin = true;
       message.innerHTML = "O win the game";
       audio.play();
-      blood.style.display = "block";
+      blood.style.zIndex = "1";
       updateScore2(playerScoreTwo)
       break;
     }
@@ -301,6 +301,9 @@ function playerChoice(element) {
         message.innerHTML = "Au tour de X";
         player = "O";
       } else {
+        for (let i = 0; i < pions.length; i++) {
+          pions[i].disabled = true
+        }
         element.style.color = "white";
         message.innerHTML = "Au tour de O";
         player = "X";
@@ -312,19 +315,17 @@ function playerChoice(element) {
         setTimeout(() => {// appelle ma fonction avec un delai de 1sec
           ia()
         }, 1000); // delai toujours en milliseconde
-
-
       }
 
     }
   }
 }
 
-
 // le cpu click sur une case aleatoirement grace a la fonction random
 function ia() {
   iaArray = []
   for (let i = 0; i < pions.length; i++) {
+    pions[i].disabled = false
     if (pions[i].innerHTML === "") {
       iaArray.push([i])
     }
@@ -341,8 +342,8 @@ function reset() {
     pions[i].style.backgroundColor = "black";
     message.innerHTML = "Veuillez commencer la partie";
     checkWin = false;
-    blood.style.display = "none";
-    blood2.style.display = "none";
+    blood.style.zIndex = "-1";
+    blood2.style.zIndex = "-1";
     lap = 1;
   }
 }

@@ -83,19 +83,37 @@ body {
     font-family: cursive;
   }
 
+  #joueur1{
+    top: 150px;
+    position: relative; 
+    
+  }
+
+  #joueur2{
+    top: 150px;
+   position: relative; 
+  }
+
   #blood{
-    display: none;
-    top: 255px;
-    left: 345px;
-    position: absolute;
+    z-index: -1;
   }
 
   #blood2{
-    display: none;
-    top: 255px;
-    right: 335px;
-    position: absolute;
+    z-index: -1;
+    }
+
+
+  #j1{
+    display: flex;
+    flex-flow: column;
   }
+
+  #j2{
+    display: flex;
+    flex-flow: column;
+  }
+
+ 
   
 
 
