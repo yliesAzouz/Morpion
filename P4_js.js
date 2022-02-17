@@ -155,6 +155,9 @@ function playerChoice(element) {
         message.innerHTML = "Au tour des Jaunes";
         player = "O";
       } else {
+        for (let i = 0; i < pions.length; i++) {
+          pions[i].disabled = true
+        }
         element.style.backgroundColor = "yellow";
         element.style.color = "yellow";
         message.innerHTML = "Au tour des red";
@@ -177,6 +180,7 @@ function playerChoice(element) {
 function ia() {
   iaArray = []
   for (let i = 0; i < pions.length; i++) {
+    pions[i].disabled = false
     if (pions[i].innerHTML === "") {
       iaArray.push([i])
     }

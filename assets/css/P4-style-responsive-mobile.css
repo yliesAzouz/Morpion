@@ -5,6 +5,37 @@
         flex-wrap: wrap;
     }
     
+   
+
+    .joueur img{
+        height: 150px;
+        margin: 0;
+    }
+
+    #Jeu button {
+        width: 40px;
+        height: 40px;
+        font-weight: bold;
+        font-size: 20px;
+        float: left;
+        font-family: cursive;
+       margin: 4px;
+        border-radius: 50%;
+      }
+
+      #Jeu{
+          padding: 4px;
+      }
+
+      td {
+        width: 45px;
+      }
+
+
+}
+
+@media screen and (max-width: 672px) {
+
     #Jeu{
         order: 3;
     }
@@ -12,10 +43,4 @@
     #j2{
         order: 2;
     }
-
-    .joueur img{
-        height: 150px;
-    }
-
-
 }

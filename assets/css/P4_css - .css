@@ -42,6 +42,7 @@ body {
   font-family: cursive;
  margin: 10px;
   border-radius: 50%;
+  background-color: rgb(120, 120, 206);
 }
 
 td {
